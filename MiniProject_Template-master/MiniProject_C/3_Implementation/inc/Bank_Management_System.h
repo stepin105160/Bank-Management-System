@@ -31,10 +31,10 @@ struct {
 
 float interest(float t,float amount,int rate);
 void fordelay(int j);
-void new_acc();
-void view_list();
-void edit(void);
-void transact(void);
+int  new_acc();
+int  view_list();
+int  edit(void);
+int  transact(void);
 void erase(void);
 void see(void);
 void close(void);
