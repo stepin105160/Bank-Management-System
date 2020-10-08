@@ -2,6 +2,7 @@
 
 int i,j;
 int main_exit;
+int flag=0;
 void menu();
 
 void menu(void)
