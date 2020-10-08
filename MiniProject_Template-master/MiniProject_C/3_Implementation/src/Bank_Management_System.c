@@ -13,9 +13,10 @@ void fordelay(int j)
          k=i;
 }
 
-void new_acc()
+int new_acc()
 
 {
+	{	
     int choice;
     FILE *ptr;
 
@@ -58,7 +59,7 @@ void new_acc()
 
 
     fclose(ptr);
-    printf("\nAccount created successfully!");
+    printf("\nAccount created successfully!");	
     add_invalid:
     printf("\n\n\n\t\tEnter 1 to go to the main menu and 0 to exit:");
     scanf("%d",&main_exit);
@@ -72,9 +73,14 @@ void new_acc()
             printf("\nInvalid!\a");
             goto add_invalid;
         }
+	flag=1;
+	break;
 }
-void view_list()
+	return flag;
+}
+int view_list()
 {
+	{	
     FILE *view;
     view=fopen("record.dat","r");
     int test=0;
@@ -105,9 +111,15 @@ void view_list()
             printf("\nInvalid!\a");
             goto view_list_invalid;
         }
+	flag=1;
+	break;
 }
-void edit(void)
+	return flag;
+}
+
+int edit(void)
 {
+	{
     int choice,test=0;
     FILE *old,*newrec;
     old=fopen("record.dat","r");
@@ -174,10 +186,15 @@ if(test!=1)
         else
             close();
         }
+	flag=1;
+	break;
 }
-
-void transact(void)
-{   int choice,test=0;
+	return flag;
+}
+int transact(void)
+{  
+	{	
+    int choice,test=0;
     FILE *old,*newrec;
     old=fopen("record.dat","r");
     newrec=fopen("new.dat","w");
@@ -256,8 +273,11 @@ void transact(void)
         else
             close();
    }
-
+	flag=1;
+	break;	
 }
+	return flag;
+}	
 void erase(void)
 {
     FILE *old,*newrec;
