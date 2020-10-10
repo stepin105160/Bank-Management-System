@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME = Bank Management System
+PROJECT_NAME = Bank_Management_System
 
 # Output directory
 BUILD = build
